@@ -124,3 +124,6 @@ When I supply the token in the request header\
 And I call update qr endpoint with valid qr_id and a request body not in json format\
 Then status code should be 400\
 And I get an error message that the request passed is not a valid json format
+
+Manual QA Engineer question 2:\
+The test case we should create for that is a consumer-driven contract test case where we have a contract from microservice A(provider) and make sure that it would always return the needed fields from the response that microservice B(consumer) would need. This way, we know that for any new version of microservice A, the functionality of microservice B and all other microservices that gets a contract from the provider will not break.
